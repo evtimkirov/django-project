@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    List of all members
+{% endblock %}
+
+{% block content %}
+    <h1>{{ member.first_name }} {{ member.last_name }}</h1>
+
+    <p>Phone: {{ member.phone_number }}</p>
+    <p>Member since: {{ member.created_date|default:' - ' }}</p>
+
+    <p>Back to <a href="/members">Members</a></p>
+{% endblock %}
