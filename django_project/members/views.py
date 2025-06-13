@@ -24,3 +24,11 @@ def details(request, id):
   }
 
   return HttpResponse(template.render(context, request))
+
+def testing(request):
+  template = loader.get_template('testing.html')
+  data = {
+    'fruits': ['Apple', 'Orange', 'Banana'],
+  }
+
+  return HttpResponse(template.render(data, request))

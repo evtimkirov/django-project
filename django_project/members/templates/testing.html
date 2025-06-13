@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Testing page
+{% endblock %}
+
+{% block content %}
+    <h1>Testing page</h1>
+    <ul>
+    {% for fruit in fruits %}
+        <li>{{ fruit }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
